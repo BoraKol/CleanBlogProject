@@ -1,1 +1,21 @@
-console.log("PCAT PROJESINE MERHABA!");
+const express = require('express')
+const app = express()
+
+app.get('/', function (req, res) {
+//   res.send('Hello World')
+    const blog = {
+        id:1,
+        title:'Blog title',
+        description: "Blog description",
+    }
+
+    res.send(blog);
+})
+
+
+
+const port = 3000;
+
+app.listen(port , () => {
+    console.log(`Sunucu ${port} portunda baslatildi...`);
+})
