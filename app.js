@@ -30,6 +30,14 @@ app.get('/', function (req, res) {
     res.render('index');
 })
 
+app.get('/about' , (req,res) => {
+    res.render("about");
+})
+
+app.get("/add" , (req,res) => {
+    res.render("add_post");
+})
+
 
 
 const port = 3000;
